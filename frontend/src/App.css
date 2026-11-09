@@ -1,0 +1,1043 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #222;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #172554;
+  color: white;
+  padding: 15px 40px;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  color: #facc15;
+}
+
+.hero {
+  text-align: center;
+  padding: 55px 20px;
+  background-color: #dbeafe;
+}
+
+.hero h1 {
+  color: #172554;
+  font-size: 36px;
+}
+
+.hero input {
+  padding: 12px;
+  width: 260px;
+  max-width: 70%;
+  border: 1px solid #999;
+  border-radius: 6px;
+}
+
+.hero button {
+  padding: 12px 18px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #172554;
+  color: white;
+  cursor: pointer;
+}
+
+main {
+  padding: 30px 40px;
+}
+
+main h2 {
+  text-align: center;
+}
+
+.book-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.book-card {
+  background-color: white;
+  padding: 22px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px #00000015;
+}
+
+.book-card span {
+  color: green;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #172554;
+  color: white;
+  margin-top: 30px;
+}
+
+.login-container {
+  background-color: white;
+  width: 350px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  color: #222;
+  font-size: 15px;
+}
+
+.login-container button {
+  padding: 12px;
+  background-color: #1b2a57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #304580;
+}
+
+/* Librarian dashboard layout */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.stat-card {
+  padding: 20px;
+  background-color: #f1f5fb;
+  border: 1px solid #dce4f0;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.stat-card h4 {
+  margin: 0 0 12px;
+  color: #24345c;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.login-container:has(.dashboard-stats) {
+  width: min(1100px, 95%);
+  max-width: 1100px;
+  box-sizing: border-box;
+}
+
+.login-container:has(.dashboard-stats) input,
+.login-container:has(.dashboard-stats) select {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.login-container:has(.dashboard-stats) button {
+  margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .login-container:has(.dashboard-stats) {
+    width: 95%;
+    padding: 16px;
+  }
+}
+
+/* Shared Responsive Styles */
+
+:root {
+  font-family: Arial, sans-serif;
+  color: #24324b;
+  background-color: #f4f7fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: #f4f7fc;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.login-container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 32px auto;
+  padding: 28px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(25, 40, 80, 0.08);
+}
+
+.login-container h2 {
+  color: #192c59;
+  margin-top: 0;
+}
+
+.login-container h3 {
+  color: #243b70;
+  margin-top: 28px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 500px;
+  margin: 18px auto;
+}
+
+input,
+select,
+textarea {
+  max-width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  background-color: white;
+  color: #24324b;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #7196dd;
+  outline-offset: 1px;
+}
+
+.login-container form input,
+.login-container form select,
+.login-container form textarea {
+  width: 100%;
+}
+
+button {
+  max-width: 100%;
+  padding: 11px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #192c59;
+  color: white;
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #304c89;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid #7196dd;
+  outline-offset: 3px;
+}
+
+.login-container button {
+  margin: 4px;
+}
+
+.login-container form button {
+  margin: 4px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.login-container>div,
+.login-container>section {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    width: calc(100% - 20px);
+    margin: 14px auto;
+    padding: 18px 14px;
+  }
+
+  .login-container h2 {
+    font-size: 24px;
+  }
+
+  .login-container h3 {
+    font-size: 20px;
+  }
+
+  .login-container form {
+    max-width: 100%;
+  }
+
+  .login-container button {
+    white-space: normal;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 16px 12px;
+  }
+
+  .login-container form button {
+    width: 100%;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
+
+/*Mobile overflow fix */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.navbar {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero,
+main,
+.book-container {
+  width: 100%;
+  min-width: 0;
+}
+
+.book-card {
+  min-width: 0;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 14px 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+    overflow-wrap: anywhere;
+  }
+
+  .book-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .book-card {
+    width: 100%;
+  }
+
+  .login-container {
+    width: calc(100% - 20px);
+  }
+}
+
+/* Admin Dashboard Mobile Improvements */
+
+@media (max-width: 768px) {
+
+  .login-container {
+    overflow-wrap: break-word;
+  }
+
+  .login-container table {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .login-container th,
+  .login-container td {
+    padding: 10px;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .login-container h2,
+  .login-container h3 {
+    line-height: 1.3;
+  }
+}
+
+/* Admin Dashboard Layout */
+
+.admin-dashboard {
+  width: min(1100px, calc(100% - 32px));
+  margin: 32px auto;
+  padding: 28px;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(25, 40, 80, 0.08);
+  overflow-wrap: break-word;
+}
+
+.admin-dashboard h2,
+.admin-dashboard h3 {
+  color: #1a2b55;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.admin-dashboard>h2:first-child {
+  margin-top: 0;
+}
+
+.admin-dashboard p {
+  margin-bottom: 14px;
+  line-height: 1.6;
+}
+
+.admin-dashboard table {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-dashboard th,
+.admin-dashboard td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #e2e8f0;
+}
+
+.admin-dashboard button {
+  margin: 6px 4px;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+  .admin-dashboard {
+    width: calc(100% - 20px);
+    margin: 16px auto;
+    padding: 20px 14px;
+  }
+
+  .admin-dashboard h2 {
+    font-size: 24px;
+  }
+
+  .admin-dashboard h3 {
+    font-size: 20px;
+  }
+
+  .admin-dashboard th,
+  .admin-dashboard td {
+    padding: 9px;
+    font-size: 14px;
+  }
+
+  .admin-dashboard input,
+  .admin-dashboard select,
+  .admin-dashboard textarea {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-dashboard {
+    padding: 16px 12px;
+  }
+
+  .admin-dashboard button {
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+
+/* LibraryHub Navbar and Search Improvements */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 30px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navbar .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #202020;
+  font-size: 21px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.navbar .nav-brand:hover {
+  color: #202020;
+  text-decoration: none;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  background: #202020;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-width: 0;
+}
+
+.navbar .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 12px;
+  color: #303030;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 9px;
+  white-space: nowrap;
+}
+
+.navbar .nav-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.navbar .nav-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  color: #202020;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.navbar .nav-actions .nav-profile {
+  background: #f0f0ee;
+  border: 1px solid #e5e5e2;
+}
+
+.navbar .nav-actions .nav-primary {
+  background: #202020;
+  color: white;
+}
+
+/* Hover effects for navigation links */
+
+.navbar .nav-links a,
+.navbar .nav-actions a {
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-actions a:hover {
+  background: #eaeae8;
+  color: #202020;
+  transform: translateY(-2px);
+}
+
+.navbar .nav-actions .nav-primary:hover {
+  background: #383838;
+  color: white;
+}
+
+/* Centered Search Area */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 65px 20px;
+  background: #f7f7f5;
+}
+
+.hero h1 {
+  color: #202020;
+}
+
+.hero p {
+  color: #686868;
+}
+
+.hero .search-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 850px;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.hero .search-controls>input {
+  width: min(100%, 540px);
+  max-width: 100%;
+  padding: 15px 18px;
+  border: 1px solid #d8d8d5;
+  border-radius: 14px;
+  background: white;
+  color: #202020;
+  font-size: 16px;
+}
+
+.hero .search-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+.hero .search-filters select {
+  width: 190px;
+  max-width: 100%;
+  padding: 12px;
+  border: 1px solid #dededb;
+  border-radius: 10px;
+  background: white;
+  color: #202020;
+  cursor: pointer;
+}
+
+/* Button hover effects */
+
+button:not(:disabled):not([aria-haspopup]):not(.dropdown-button):hover {
+  background-color: #383838;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Mobile layout */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 14px 18px;
+  }
+
+  .navbar .nav-links {
+    order: 3;
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .navbar .nav-brand {
+    font-size: 18px;
+  }
+
+  .navbar .nav-links a {
+    font-size: 12px;
+    padding: 9px;
+  }
+
+  .navbar .nav-actions a {
+    font-size: 12px;
+    padding: 9px;
+  }
+
+  .hero {
+    padding: 45px 14px;
+  }
+
+  .hero .search-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero .search-filters select {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .navbar .nav-links a,
+  .navbar .nav-actions a {
+    transition: none;
+  }
+
+  .navbar .nav-links a:hover,
+  .navbar .nav-actions a:hover {
+    transform: none;
+  }
+}
+
+/* LibraryHub Final Navigation Layout */
+
+@media (min-width: 769px) {
+  .navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 14px 16px;
+  }
+
+  .navbar .nav-brand {
+    flex-shrink: 0;
+    font-size: 18px;
+    gap: 8px;
+  }
+
+  .navbar .nav-links {
+    display: flex;
+    flex: 1;
+    flex-basis: auto;
+    order: 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 2px;
+    width: auto;
+    min-width: 0;
+  }
+
+  .navbar .nav-links a {
+    padding: 9px 6px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .navbar .nav-actions {
+    flex-shrink: 0;
+    margin-left: 0;
+  }
+
+  .navbar .nav-actions a {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .navbar .nav-links {
+    order: 3;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* LibraryHub - Consistent Light Theme */
+
+:root {
+  --page-bg: #f7f7f5;
+  --card-bg: #ffffff;
+  --soft-bg: #f0f0ee;
+  --text-color: #202020;
+  --muted-text: #686868;
+  --border-color: #e5e5e2;
+  --button-bg: #202020;
+  --button-hover: #383838;
+}
+
+/* Page backgrounds */
+
+html,
+body,
+#root,
+.app {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
+/* Shared dashboard and form containers */
+
+.login-container,
+.admin-dashboard,
+.book-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* All dashboard headings */
+
+.login-container h1,
+.login-container h2,
+.login-container h3,
+.login-container h4,
+.admin-dashboard h1,
+.admin-dashboard h2,
+.admin-dashboard h3,
+.admin-dashboard h4,
+.book-card h3,
+.stat-card h4 {
+  color: var(--text-color);
+}
+
+/* Dashboard statistics */
+
+.stat-card {
+  background-color: var(--soft-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  color: var(--text-color);
+}
+
+/* Forms and dropdowns */
+
+input,
+select,
+textarea,
+.login-container input,
+.login-container select,
+.admin-dashboard input,
+.admin-dashboard select {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted-text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #9a9a9a;
+  outline-offset: 1px;
+  border-color: #888888;
+}
+
+/* All regular buttons */
+
+button,
+.login-container button,
+.admin-dashboard button,
+.hero button {
+  background-color: var(--button-bg);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Hover animation except dropdown buttons */
+
+button:not(:disabled):not([aria-haspopup]):not(.dropdown-button):hover {
+  background-color: var(--button-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Tables */
+
+table {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+th {
+  background-color: var(--soft-bg);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+td {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+th,
+td,
+.admin-dashboard th,
+.admin-dashboard td {
+  border-color: var(--border-color);
+}
+
+/* General text */
+
+main,
+main h2,
+.login-container p,
+.admin-dashboard p,
+.book-card p {
+  color: var(--text-color);
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--card-bg);
+  color: var(--muted-text);
+  border-top: 1px solid var(--border-color);
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  button {
+    transition: none;
+  }
+
+  button:hover {
+    transform: none !important;
+  }
+}

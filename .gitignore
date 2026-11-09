@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build files
+dist/
+**/dist/
+
+# Sensitive files
+.env
+.env.*
+*.pem
+*.key
+
+# Logs
+*.log
+
+# Editor files
+.vscode/
+.DS_Store
+Thumbs.db
