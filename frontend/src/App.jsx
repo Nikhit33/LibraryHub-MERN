@@ -147,7 +147,7 @@ function App() {
 
       <nav className="navbar">
         <a href="#home" className="nav-brand">
-          <span className="brand-icon">ðŸ“š</span>
+          <span className="brand-icon">📚</span>
           <span>LibraryHub</span>
         </a>
 
@@ -351,7 +351,7 @@ function App() {
       )}
 
       <footer id="about">
-        <p>LibraryHub â€” Your gateway to knowledge.</p>
+        <p>LibraryHub Your gateway to knowledge.</p>
       </footer>
     </div>
   );
