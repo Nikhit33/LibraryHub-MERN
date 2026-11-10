@@ -59,7 +59,7 @@ function App() {
       return;
     }
     try {
-      const response = await fetch('http://localhost:5000/api/reservations', {
+      const response = await fetch('https://libraryhub-mern-jrbk.onrender.com/api/reservations', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ function App() {
 
       try {
         const response = await fetch(
-          `http://localhost:5000/api/books?search=${encodeURIComponent(search)}&category=${encodeURIComponent(category)}`
+          `https://libraryhub-mern-jrbk.onrender.com/api/books?search=${encodeURIComponent(search)}&category=${encodeURIComponent(category)}`
         );
 
         if (!response.ok) {
@@ -147,7 +147,7 @@ function App() {
 
       <nav className="navbar">
         <a href="#home" className="nav-brand">
-          <span className="brand-icon">📚</span>
+          <span className="brand-icon">ðŸ“š</span>
           <span>LibraryHub</span>
         </a>
 
@@ -239,7 +239,7 @@ function App() {
                 setCurrentPage(1);
               }}
             >
-              <option value="title">Title (A–Z)</option>
+              <option value="title">Title (Aâ€“Z)</option>
               <option value="newest">Newest First</option>
             </select>
           </div>
@@ -351,10 +351,11 @@ function App() {
       )}
 
       <footer id="about">
-        <p>LibraryHub — Your gateway to knowledge.</p>
+        <p>LibraryHub â€” Your gateway to knowledge.</p>
       </footer>
     </div>
   );
 }
 
 export default App;
+

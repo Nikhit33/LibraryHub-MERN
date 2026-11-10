@@ -46,7 +46,7 @@ function LibrarianDashboard() {
 
     useEffect(() => {
         function loadBooks() {
-            fetch('http://localhost:5000/api/books')
+            fetch('https://libraryhub-mern-jrbk.onrender.com/api/books')
                 .then((response) => response.json())
                 .then((data) => {
                     setBooks(data);
@@ -76,7 +76,7 @@ function LibrarianDashboard() {
 
             try {
                 const response = await fetch(
-                    'http://localhost:5000/api/transactions',
+                    'https://libraryhub-mern-jrbk.onrender.com/api/transactions',
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -122,7 +122,7 @@ function LibrarianDashboard() {
 
             try {
                 const response = await fetch(
-                    'http://localhost:5000/api/members',
+                    'https://libraryhub-mern-jrbk.onrender.com/api/members',
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -159,7 +159,7 @@ function LibrarianDashboard() {
         const token = sessionStorage.getItem('token');
 
         try {
-            const response = await fetch('http://localhost:5000/api/books', {
+            const response = await fetch('https://libraryhub-mern-jrbk.onrender.com/api/books', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -208,7 +208,7 @@ function LibrarianDashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/books/${editingBook._id}`,
+                `https://libraryhub-mern-jrbk.onrender.com/api/books/${editingBook._id}`,
                 {
                     method: 'PUT',
                     headers: {
@@ -261,7 +261,7 @@ function LibrarianDashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/books/${book._id}`,
+                `https://libraryhub-mern-jrbk.onrender.com/api/books/${book._id}`,
                 {
                     method: 'DELETE',
                     headers: {
@@ -299,7 +299,7 @@ function LibrarianDashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/transactions/${transaction._id}/return`,
+                `https://libraryhub-mern-jrbk.onrender.com/api/transactions/${transaction._id}/return`,
                 {
                     method: 'POST',
                     headers: {
@@ -335,7 +335,7 @@ function LibrarianDashboard() {
 
         try {
             const response = await fetch(
-                'http://localhost:5000/api/transactions/issue',
+                'https://libraryhub-mern-jrbk.onrender.com/api/transactions/issue',
                 {
                     method: 'POST',
                     headers: {
@@ -382,7 +382,7 @@ function LibrarianDashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/transactions/${transaction._id}/renew`,
+                `https://libraryhub-mern-jrbk.onrender.com/api/transactions/${transaction._id}/renew`,
                 {
                     method: 'POST',
                     headers: {
@@ -420,7 +420,7 @@ function LibrarianDashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/transactions/${transaction._id}/pay-fine`,
+                `https://libraryhub-mern-jrbk.onrender.com/api/transactions/${transaction._id}/pay-fine`,
                 {
                     method: 'PATCH',
                     headers: {
@@ -895,3 +895,4 @@ function LibrarianDashboard() {
 }
 
 export default LibrarianDashboard;
+

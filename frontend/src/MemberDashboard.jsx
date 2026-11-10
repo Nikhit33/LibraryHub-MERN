@@ -37,7 +37,7 @@ function MemberDashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/transactions/${transaction._id}/renew`,
+                `https://libraryhub-mern-jrbk.onrender.com/api/transactions/${transaction._id}/renew`,
                 {
                     method: "POST",
                     headers: {
@@ -70,7 +70,7 @@ function MemberDashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/reservations/${reservationId}/cancel`,
+                `https://libraryhub-mern-jrbk.onrender.com/api/reservations/${reservationId}/cancel`,
                 {
                     method: "PATCH",
                     headers: {
@@ -109,7 +109,7 @@ function MemberDashboard() {
             return;
         }
 
-        fetch("http://localhost:5000/api/reservations/my", {
+        fetch("https://libraryhub-mern-jrbk.onrender.com/api/reservations/my", {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -149,7 +149,7 @@ function MemberDashboard() {
         }
 
 
-        fetch("http://localhost:5000/api/transactions/my", { //requests the borrowing history from the backend API
+        fetch("https://libraryhub-mern-jrbk.onrender.com/api/transactions/my", { //requests the borrowing history from the backend API
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -286,7 +286,7 @@ function MemberDashboard() {
 
                     <p>
                         <strong>Fine Amount:</strong>{" "}
-                        ₹{transaction.fineAmount || 0}
+                        â‚¹{transaction.fineAmount || 0}
                     </p>
 
                     <p>
@@ -374,3 +374,4 @@ function MemberDashboard() {
 }
 
 export default MemberDashboard;
+

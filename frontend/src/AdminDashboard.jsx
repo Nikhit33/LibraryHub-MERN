@@ -37,8 +37,8 @@ function AdminDashboard() {
 
             try {
                 const [booksResponse, transactionsResponse] = await Promise.all([
-                    fetch('http://localhost:5000/api/books'),
-                    fetch('http://localhost:5000/api/transactions', {
+                    fetch('https://libraryhub-mern-jrbk.onrender.com/api/books'),
+                    fetch('https://libraryhub-mern-jrbk.onrender.com/api/transactions', {
                         headers: {
                             Authorization: `Bearer ${token}`
                         }
@@ -84,7 +84,7 @@ function AdminDashboard() {
 
             try {
                 const response = await fetch(
-                    'http://localhost:5000/api/users',
+                    'https://libraryhub-mern-jrbk.onrender.com/api/users',
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -125,7 +125,7 @@ function AdminDashboard() {
 
             try {
                 const response = await fetch(
-                    'http://localhost:5000/api/settings',
+                    'https://libraryhub-mern-jrbk.onrender.com/api/settings',
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -177,7 +177,7 @@ function AdminDashboard() {
 
             try {
                 const response = await fetch(
-                    'http://localhost:5000/api/admin/librarians',
+                    'https://libraryhub-mern-jrbk.onrender.com/api/admin/librarians',
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -221,7 +221,7 @@ function AdminDashboard() {
 
             try {
                 const response = await fetch(
-                    'http://localhost:5000/api/admin/reports',
+                    'https://libraryhub-mern-jrbk.onrender.com/api/admin/reports',
                     {
                         headers: {
                             Authorization: `Bearer ${token}`
@@ -301,7 +301,7 @@ function AdminDashboard() {
 
         try {
             const response = await fetch(
-                'http://localhost:5000/api/settings',
+                'https://libraryhub-mern-jrbk.onrender.com/api/settings',
                 {
                     method: 'PUT',
                     headers: {
@@ -339,7 +339,7 @@ function AdminDashboard() {
 
         try {
             const response = await fetch(
-                'http://localhost:5000/api/admin/librarians',
+                'https://libraryhub-mern-jrbk.onrender.com/api/admin/librarians',
                 {
                     method: 'POST',
                     headers: {
@@ -382,7 +382,7 @@ function AdminDashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/admin/librarians/${id}/status`,
+                `https://libraryhub-mern-jrbk.onrender.com/api/admin/librarians/${id}/status`,
                 {
                     method: 'PATCH',
                     headers: {
@@ -425,7 +425,7 @@ function AdminDashboard() {
 
         try {
             const response = await fetch(
-                `http://localhost:5000/api/admin/librarians/${id}`,
+                `https://libraryhub-mern-jrbk.onrender.com/api/admin/librarians/${id}`,
                 {
                     method: 'DELETE',
                     headers: {
@@ -956,3 +956,4 @@ function AdminDashboard() {
 }
 
 export default AdminDashboard;
+

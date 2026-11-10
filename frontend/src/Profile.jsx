@@ -20,7 +20,7 @@ function Profile() {
         }
 
         try {
-            const response = await fetch('http://localhost:5000/api/profile', {
+            const response = await fetch('https://libraryhub-mern-jrbk.onrender.com/api/profile', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -49,7 +49,7 @@ function Profile() {
         const token = sessionStorage.getItem('token');
 
         try {
-            const response = await fetch('http://localhost:5000/api/profile', {
+            const response = await fetch('https://libraryhub-mern-jrbk.onrender.com/api/profile', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ function Profile() {
 
         try {
             const response = await fetch(
-                'http://localhost:5000/api/profile/password',
+                'https://libraryhub-mern-jrbk.onrender.com/api/profile/password',
                 {
                     method: 'PUT',
                     headers: {
